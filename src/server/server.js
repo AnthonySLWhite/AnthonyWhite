@@ -1,19 +1,18 @@
 // ----- Package Imports ----- //
 import express from 'express';
 import chalk from 'chalk';
-import path from 'path';
 // ----- File Imports ----- //
-
+import tools from './tools';
 // ----- End Imports ----- //
 
-const port = process.env.PORT || 2021;
+const port = process.env.PORT || 3000;
 console.log(`Port: ${port} `);
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, './../', 'publicDist')));
+app.use(express.static(tools.publicPath()));
 
 app.get('/express_backend', (req, res) => {
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT!!!!!' });
   console.log('Connection successful!');
 });
 
