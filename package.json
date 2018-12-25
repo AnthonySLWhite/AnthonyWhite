@@ -15,11 +15,11 @@
     "codeF:build": "npm-run-all --sequential sass:build prefixer parcel-frontend:build codeN:build",
     "buildF": "npm-run-all --sequential sass:build prefixer parcel-frontend:build",
     "NODE-SCRIPTS": "COMENTARY------------------------------------------------------------------------------------------------------",
-    "nodemon-dev": "cross-env NODE_ENV=development nodemon ./dist/app.js",
-    "nodemon-prod": "cross-env NODE_ENV=production nodemon ./prod/app.js",
+    "nodemon-dev": "cross-env NODE_ENV=development nodemon dist/app.js",
+    "nodemon-prod": "cross-env NODE_ENV=production nodemon prod/app.js",
     "debug": "nodemon --inspect-brk ./dist/app.js",
     "SERVER-SCRIPTS": "COMENTARY------------------------------------------------------------------------------------------------------",
-    "nodemon-frontend": "cross-env NODE_ENV=production FrontEnd=true nodemon ./prod/app.js",
+    "nodemon-frontend": "cross-env NODE_ENV=production FrontEnd=true nodemon prod/app.js",
     "DOM-SCRIPTS": "COMENTARY------------------------------------------------------------------------------------------------------",
     "sass": "npm-run-all --sequential sass:build sass:watch",
     "sass:watch": "node-sass --watch -r --include-path \"public/src/assets/css\" -o \"public/src/assets/css\" --source-map true \"public/src/assets/css/\"",
@@ -31,7 +31,7 @@
     "parcel-frontend": "cross-env NODE_ENV=development parcel watch public/src/index.html --out-dir public/dist --target browser",
     "parcel-frontend:build": "cross-env NODE_ENV=production parcel build public/src/index.html --out-dir public/prod --target browser",
     "OTHERS": "COMENTARY------------------------------------------------------------------------------------------------------",
-    "test": "cross-env NODE_ENV=production FrontEnd=true node test.js"
+    "comingSoon": "cross-env NODE_ENV=development parcel build comingSoon/src/index.html --out-dir comingSoon/prod --target browser"
   },
   "author": "Anthony White",
   "license": "",

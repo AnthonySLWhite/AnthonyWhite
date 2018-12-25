@@ -9,6 +9,11 @@ const port = process.env.PORT || 3000;
 console.log(`Port: ${port} `);
 const app = express();
 
+
+app.use(express.static(tools.comingSoonPath()), (req, res, next) => {
+  // next()
+});
+
 app.use(express.static(tools.publicPath()));
 
 app.get('/express_backend', (req, res) => {
