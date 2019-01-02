@@ -3,7 +3,7 @@ import express from 'express';
 import compression from 'compression';
 import chalk from 'chalk';
 // ----- File Imports ----- //
-import tools from './tools';
+import tools from './tools/tools';
 // ----- End Imports ----- //
 
 const port = process.env.PORT || 3000;
@@ -35,3 +35,5 @@ app.listen(port, () => {
     chalk.white.bgRed(`Server started on port ${port} ...`),
   );
 });
+
+export default app;
