@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+// location.hostname
+
+
+//   location.hostname === 'antoniobranco.eu' ? lang = 'PT' : lang = 'EN';
 
 class App extends Component {
   constructor(props) {
