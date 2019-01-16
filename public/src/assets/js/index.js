@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 // location.hostname
 
-
 //   location.hostname === 'antoniobranco.eu' ? lang = 'PT' : lang = 'EN';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null
+      data: null,
     };
   }
 
@@ -17,7 +16,9 @@ class App extends Component {
       if (res.status !== 200) {
         return console.log('Problem connecting to server');
       }
-      return res.json().then(data => this.setState({ data: data.express }));
+      return res
+        .json()
+        .then(data => this.setState({ data: data.express }));
     });
   }
 

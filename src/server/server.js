@@ -14,14 +14,9 @@ const app = express();
 // <-------------- compression --------------> //
 app.use(compression());
 
-app.use(
-  express.static(tools.comingSoonPath()),
-  (req, res, next) => {
-    next();
-  },
-);
+// app.use(express.static(tools.comingSoonPath()));
 
-// app.use(express.static(tools.publicPath()));
+app.use(express.static(tools.publicPath()));
 
 app.get('/express_backend', (req, res) => {
   res.send({
