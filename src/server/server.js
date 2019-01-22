@@ -5,7 +5,7 @@ import chalk from 'chalk';
 // ----- File Imports ----- //
 import tools from './tools/tools';
 // ----- End Imports ----- //
-
+console.log('test');
 const port = process.env.PORT || 3000;
 // console.log(`Port: ${port} `);
 const app = express();

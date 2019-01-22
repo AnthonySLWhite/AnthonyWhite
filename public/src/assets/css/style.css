@@ -393,52 +393,156 @@ template {
   box-sizing: border-box; }
 
 body {
-  background-color: #231e25; }
+  background-color: #231e25;
+  color: #fff; }
 
-.App {
+.header {
   background-image: url("./../img/Image_background.svg");
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: 175%;
+  background-size: 230%;
   background-position: right bottom;
   position: relative; }
 
-@media (min-width: 768px) {
-  .App {
-    background-size: 120%;
-    background-position: center; } }
-
-@media (min-width: 1024px) {
-  .App {
-    background-size: 125%;
-    background-position: center; } }
-
-.logo {
+.header .logo {
   position: absolute;
   left: 2%;
   top: 2%;
+  width: 7em; }
+
+.header .logo .logoImg {
   opacity: 0.4;
-  width: 15vh;
-  height: auto; }
-
-.signiture-quote {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 20vw;
-  width: 40vh;
-  height: auto; }
-
-.signiture-quote .signiture {
-  display: block;
-  margin: auto;
   width: 100%;
   height: auto; }
 
-.signiture-quote .quote {
+.header .signiture-quote {
+  position: absolute;
+  left: 30%;
+  transform: translateX(-50%);
+  top: 30%;
+  width: 50%;
+  height: auto; }
+
+@media (min-width: 1024px) {
+  .header .signiture-quote {
+    top: auto;
+    bottom: 10%;
+    left: 25%; } }
+
+.header .signiture-quote .signiture {
+  display: block;
+  margin: auto;
+  margin-left: 2%;
+  width: 100%;
+  height: auto; }
+
+.header .signiture-quote .quote {
   color: #fff;
-  text-align: right; }
+  text-align: right;
+  font-size: 1.6rem; }
+
+@media (min-width: 768px) {
+  .header {
+    background-size: 200%; } }
+
+@media (min-width: 1024px) {
+  .header {
+    background-size: 110%; } }
+
+.skills_about {
+  display: grid;
+  grid-template-columns: 100%;
+  margin: 5%; }
+
+@media (min-width: 768px) {
+  .skills_about {
+    grid-template-columns: 50% 1fr; } }
+
+.skills_about .skills {
+  grid-column: span 1;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  border: 4px solid #fff;
+  border-radius: 10px; }
+
+@media (min-width: 768px) {
+  .skills_about .skills {
+    grid-template-columns: 28% 1fr; } }
+
+.skills_about .skills .skill-set {
+  padding: 2%;
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.skills_about .skills .skill-set button {
+  background: none;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 5%;
+  position: relative;
+  text-transform: uppercase;
+  padding: 10% 5%; }
+
+@media (min-width: 768px) {
+  .skills_about .skills .skill-set button {
+    font-size: 1.1rem;
+    padding: 2rem 0; } }
+
+@media (min-width: 1024px) {
+  .skills_about .skills .skill-set button {
+    font-size: 1.3rem; } }
+
+.skills_about .skills .skill-list {
+  background-color: #414141;
+  position: relative;
+  grid-column: span 1;
+  color: white;
+  margin: 0 0 0 2%;
+  padding: 3%;
+  border-left: 2px solid #fff;
+  z-index: -1; }
+
+.skills_about .skills .skill-list div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0; }
+
+.skills_about .skills .skill-list div div {
+  display: block;
+  height: auto; }
+
+.skills_about .skills .skill-list div .progress {
+  margin-bottom: 7px;
+  border-radius: 10px; }
+
+.skills_about .skills .skill-list .progress {
+  background-color: #707070; }
+
+.skills_about .skills .skill-list .progress .progress-bar {
+  background-color: #e5e5e5;
+  color: black; }
+
+.skills_about .skills .skill-list .Back-End,
+.skills_about .skills .skill-list .Design,
+.skills_about .skills .skill-list .Cloud,
+.skills_about .skills .skill-list .Others {
+  display: none; }
+
+.skills_about .about {
+  margin: 2em;
+  font-size: 1.5rem; }
+
+.footer {
+  width: 100%;
+  height: 100vh; }
 
 /*# sourceMappingURL=style.css.map */
 

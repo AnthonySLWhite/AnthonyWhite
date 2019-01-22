@@ -17,6 +17,22 @@ module.exports = {
     },
     /*
     <==========================================>
+    <              Both Node and Dom           >
+    <==========================================>
+    */
+    both: {
+      default: {
+        script: npsUtils.concurrent.nps(
+          'sass',
+          'parcel.both.dom',
+          'parcel.both.node',
+          'nodemon.both',
+        ),
+        description: 'Development mode for both Node and DOM',
+      },
+    },
+    /*
+    <==========================================>
     <                  Node.js                 >
     <==========================================>
     */
@@ -116,20 +132,28 @@ module.exports = {
     <==========================================>
     */
     nodemon: {
+      both: {
+        default: {
+          script:
+            'cross-env NODE_ENV=development FrontEnd=true nodemon dist/app.js',
+
+          hiddenFromHelp: true,
+        },
+      },
       node: {
         // Default as development
         default: {
           script:
-            'cross-env NODE_ENV=development nodemon ./dist/app.js',
+            'cross-env NODE_ENV=development nodemon dist/app.js',
           hiddenFromHelp: true,
         },
         production: {
           script:
-            'cross-env NODE_ENV=production nodemon ./prod/app.js',
+            'cross-env NODE_ENV=production nodemon prod/app.js',
           hiddenFromHelp: true,
         },
         debug: {
-          script: 'nodemon --inspect-brk ./dist/app.js',
+          script: 'nodemon --inspect-brk dist/app.js',
           hiddenFromHelp: true,
         },
       },
@@ -137,7 +161,7 @@ module.exports = {
       dom: {
         default: {
           script:
-            'cross-env NODE_ENV=production FrontEnd=true nodemon ./prod/app.js',
+            'cross-env NODE_ENV=development FrontEnd=true nodemon prod/app.js',
           hiddenFromHelp: true,
         },
       },
@@ -148,6 +172,19 @@ module.exports = {
     <==========================================>
     */
     parcel: {
+      both: {
+        node: {
+          script:
+            'cross-env NODE_ENV=development parcel watch src/app.js --public-url ./ --target node',
+          hiddenFromHelp: true,
+        },
+
+        dom: {
+          script:
+            'cross-env NODE_ENV=development parcel watch public/src/index.html --out-dir public/dist --target browser',
+          hiddenFromHelp: true,
+        },
+      },
       node: {
         default: {
           script:
