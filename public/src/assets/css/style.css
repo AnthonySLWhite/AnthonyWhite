@@ -455,20 +455,12 @@ body {
   grid-template-columns: 100%;
   margin: 5%; }
 
-@media (min-width: 768px) {
-  .skills_about {
-    grid-template-columns: 50% 1fr; } }
-
 .skills_about .skills {
   grid-column: span 1;
   display: grid;
   grid-template-columns: 30% 1fr;
   border: 4px solid #fff;
   border-radius: 10px; }
-
-@media (min-width: 768px) {
-  .skills_about .skills {
-    grid-template-columns: 28% 1fr; } }
 
 .skills_about .skills .skill-set {
   padding: 2%;
@@ -489,15 +481,6 @@ body {
   position: relative;
   text-transform: uppercase;
   padding: 10% 5%; }
-
-@media (min-width: 768px) {
-  .skills_about .skills .skill-set button {
-    font-size: 1.1rem;
-    padding: 2rem 0; } }
-
-@media (min-width: 1024px) {
-  .skills_about .skills .skill-set button {
-    font-size: 1.3rem; } }
 
 .skills_about .skills .skill-list {
   background-color: #414141;

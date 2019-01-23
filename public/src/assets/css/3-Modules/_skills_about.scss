@@ -1,18 +1,12 @@
 .skills_about {
   display: grid;
   grid-template-columns: 100%;
-  @include tablet {
-    grid-template-columns: 50% 1fr;
-  }
   margin: 5%;
   // SKILLS --------------------------
   .skills {
     grid-column: span 1;
     display: grid;
     grid-template-columns: 30% 1fr;
-    @include tablet {
-      grid-template-columns: 28% 1fr;
-    }
     border: 4px solid #fff;
 
     border-radius: 10px;
@@ -35,15 +29,6 @@
         position: relative;
         text-transform: uppercase;
         padding: 10% 5%;
-        @include tablet {
-          font-size: 1.1rem;
-          padding: 2rem 0;
-          // justify-self: center;
-        }
-        @include desktop {
-          font-size: 1.3rem;
-          // justify-self: center;
-        }
       }
     }
 
@@ -95,7 +80,5 @@
   .about {
     margin: 2em;
     font-size: 1.5rem;
-    @include tablet {
-    }
   }
 }
