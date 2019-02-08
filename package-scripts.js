@@ -171,6 +171,11 @@ module.exports = {
             'cross-env NODE_ENV=production parcel build public/src/index.html --out-dir public/prod --target browser',
           hiddenFromHelp: true,
         },
+        buildComingSoon: {
+          script:
+            'cross-env NODE_ENV=production parcel build comingSoon/src/index.html --out-dir comingSoon/prod --target browser',
+          hiddenFromHelp: true,
+        },
       },
     },
     /*
